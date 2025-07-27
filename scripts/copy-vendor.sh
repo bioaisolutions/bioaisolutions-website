@@ -68,4 +68,4 @@ else
     exit 1
 fi
 
-echo "🎉 All vendor files copied successfully!" 
+echo "🎉 All vendor files copied successfully!"

@@ -1,0 +1,136 @@
+<!-- Page loading scripts -->
+<script>
+  (function () {
+    window.onload = function () {
+      const preloader = document.querySelector('.page-loading');
+      preloader.classList.remove('active');
+      setTimeout(function () {
+        preloader.remove();
+      }, 1000);
+    };
+  })();
+</script>
+
+<!-- Theme switcher -->
+<script>
+  // Simple theme switcher
+  document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-mode');
+    if (themeToggle) {
+      themeToggle.addEventListener('change', function() {
+        const html = document.documentElement;
+        if (this.checked) {
+          html.setAttribute('data-bs-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.setAttribute('data-bs-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+        themeToggle.checked = savedTheme === 'dark';
+      }
+    }
+  });
+</script>
+
+<!-- Cookie Banner Scripts -->
+<script>
+  function setCookie(name, value, daysToExpire) {
+    var expires = "";
+    if (daysToExpire) {
+      var date = new Date();
+      date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  function deleteCookie(name) {
+    if (getCookie(name)) {
+      document.cookie = name + '=' +
+        (path ? ';path=' + path : '') +
+        (domain ? ';domain=' + domain : '') +
+        ';expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    }
+  }
+
+  $(() => {
+    const cookieBanner = $('#cookie-banner');
+    const cookieModal = $('#cookieModal');
+
+    // Check for cookie consent
+    const cookieConsent = getCookie('cookies_accepted');
+
+    if (!cookieConsent) {
+      cookieBanner.removeClass('d-none');
+    } else if (cookieConsent === 'true') {
+      enableGACookies();
+    }
+
+    $('#accept-cookies').on('click', function() {
+      setCookie('cookies_accepted', 'true', 365);
+      enableGACookies();
+      cookieBanner.addClass('d-none');
+    });
+
+    $('#reject-cookies').on('click', function() {
+      setCookie('cookies_accepted', 'false', 365);
+      cookieBanner.addClass('d-none');
+    });
+
+    $('#view-details').on('click', function(event) {
+      event.preventDefault();
+      cookieModal.modal('show');
+    });
+
+    $('#modal-accept-cookies').on('click', function() {
+      setCookie('cookies_accepted', 'true', 365);
+      enableGACookies();
+      cookieModal.modal('hide');
+      cookieBanner.addClass('d-none');
+    });
+
+    $('#modal-reject-cookies').on('click', function() {
+      setCookie('cookies_accepted', 'false', 365);
+      cookieModal.modal('hide');
+      cookieBanner.addClass('d-none');
+    });
+
+    function enableGACookies() {
+      // Load the gtag.js script only if cookies are accepted
+      $.getScript('https://www.googletagmanager.com/gtag/js?id=G-F1XK94RJWG', function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F1XK94RJWG');
+      });
+    }
+
+    // Function to disable features that use cookies if not accepted
+    function disableCookiesFeatures() {
+      // Add your code to disable features that require cookies here
+    }
+
+    // Automatically disable features if cookies are rejected
+    if (cookieConsent === 'false') {
+      disableCookiesFeatures();
+    }
+  });
+</script> 

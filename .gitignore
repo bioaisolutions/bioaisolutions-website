@@ -44,8 +44,9 @@ go.sum
 dist/
 build/
 
-# Hugo server
-.hugo_build.lock
+# Vendor files (generated from npm) - ONLY exclude vendor files
+static/assets/vendor/
+static/js/jquery-3.7.1.min.js
 
 # Hugo archetypes (if not needed in repo)
 archetypes/

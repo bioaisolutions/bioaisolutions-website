@@ -9,6 +9,8 @@ A modern, responsive corporate website for BioAI Solutions built with Hugo and m
 - 📱 Mobile-first approach
 - 🎯 SEO optimized
 - 🔧 Easy to customize and maintain
+- 📦 NPM-based dependency management
+- 🎭 Lottie animations support
 
 ## Quick Start
 
@@ -33,6 +35,11 @@ A modern, responsive corporate website for BioAI Solutions built with Hugo and m
    npm install
    ```
 
+   This will automatically:
+   - Install all npm dependencies
+   - Copy vendor files to the appropriate locations
+   - Set up Lottie animations and other assets
+
 3. Start development server:
 
    ```bash
@@ -52,44 +59,85 @@ The built site will be in the `public/` directory.
 ## Project Structure
 
 ```txt
-├── content/                 # Content files (Markdown)
 ├── layouts/                 # HTML templates
 │   ├── _default/           # Default templates
 │   └── partials/           # Reusable components
-├── assets/                  # CSS, JS, and other assets
-│   ├── css/                # Stylesheets
-│   └── js/                 # JavaScript files
+├── scripts/                 # Build scripts
+│   └── copy-vendor.sh      # Vendor file copy script
 ├── static/                  # Static files (images, favicon, etc.)
+│   ├── assets/             # Assets (vendor files, images, etc.)
+│   │   ├── json/           # Lottie animation files
+│   │   ├── img/            # Images and icons
+│   │   ├── favicon/        # Favicon files
+│   │   └── vendor/         # Third-party libraries (generated)
+│   └── js/                 # JavaScript files
 ├── hugo.toml              # Hugo configuration
-├── package.json           # Node.js dependencies
-
+├── package.json           # Node.js dependencies and scripts
+├── package-lock.json      # Locked dependency versions
+└── README.md             # This file
 ```
+
+## Dependencies
+
+This project uses the following third-party libraries managed via npm:
+
+- **Bootstrap 5**: CSS framework
+- **Boxicons**: Icon library
+- **jQuery**: JavaScript library
+- **Swiper**: Touch slider
+- **Rellax**: Parallax library
+- **Lottie Player**: Animation player
+
+## Development
+
+### Available Scripts
+
+- `npm run dev`: Start development server with asset building
+- `npm run build`: Build for production with asset building
+- `npm run build:assets`: Copy all vendor files from node_modules
+
+### Build Scripts
+
+The project uses a single shell script for vendor file management:
+
+- `scripts/copy-vendor.sh`: Copies all vendor libraries (boxicons, swiper, rellax, lottie, jquery) with error checking and progress indicators
+
+### Adding New Dependencies
+
+1. Install the package: `npm install package-name`
+2. Update `scripts/copy-vendor.sh` to include the new library
+3. Run `npm run build:assets` to copy the new files
 
 ## Customization
 
-### Colors and Styling
+### Content and Layout
 
-Edit `assets/css/main.css` to customize colors, fonts, and other styles.
+- Modify templates in `layouts/` for layout changes
+- Update `hugo.toml` for site configuration
+- Add images to `static/assets/img/`
 
-### Content
+### Styling
 
-- Update `content/_index.md` for homepage content
-- Modify `hugo.toml` for site configuration
-- Edit templates in `layouts/` for layout changes
+The project uses the reference site's `theme.min.css` for styling. For custom styles, consider:
 
-### Configuration
+- Creating a custom CSS file in `static/assets/css/`
+- Modifying the theme file directly (not recommended for maintainability)
 
-Key configuration options in `hugo.toml`:
+### Lottie Animations
 
-- `baseURL`: Your site's base URL
-- `title`: Site title
-- `params`: Custom parameters for contact info, etc.
+The website includes Lottie animations in the features section. To add new animations:
+
+1. Place JSON animation files in `static/assets/json/`
+2. Update the HTML templates to include `<lottie-player>` elements
+3. Ensure the Lottie Player script is loaded (already configured)
 
 ## Technologies Used
 
 - **Hugo**: Static site generator
 - **Bootstrap 5**: CSS framework
 - **JavaScript**: Interactive features
+- **NPM**: Dependency management
+- **Lottie**: Animation support
 
 ## License
 

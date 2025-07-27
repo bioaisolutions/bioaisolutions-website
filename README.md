@@ -1,16 +1,45 @@
-# BioAI Solutions Website
+# BioAI Solutions
 
-A modern, responsive corporate website for BioAI Solutions built with Hugo and modern frontend technologies.
+**Bioinformatics + Genomics + AI**
 
-## Features
+BioAI Solutions is a cutting-edge biotechnology company specializing in the intersection of bioinformatics, genomics, and artificial intelligence. We provide innovative solutions for genomic data analysis, personalized medicine, and AI-driven drug discovery.
 
-- 🎨 Modern, responsive design
-- ⚡ Fast loading with optimized assets
-- 📱 Mobile-first approach
-- 🎯 SEO optimized
-- 🔧 Easy to customize and maintain
-- 📦 NPM-based dependency management
-- 🎭 Lottie animations support
+## About BioAI Solutions
+
+Our mission is to accelerate scientific discovery and improve human health through advanced computational biology and machine learning technologies. We work with research institutions, pharmaceutical companies, and healthcare providers to deliver state-of-the-art bioinformatics solutions.
+
+### Our Services
+
+- **Genomic Data Analysis**: Advanced pipeline for next-generation sequencing data
+- **AI-Powered Drug Discovery**: Machine learning models for target identification
+- **Personalized Medicine**: Precision medicine solutions for clinical applications
+- **Bioinformatics Consulting**: Expert guidance for computational biology projects
+
+## Corporate Website
+
+This repository contains the official corporate website for BioAI Solutions, built with modern web technologies for optimal performance and user experience.
+
+### Website Features
+
+- 🎨 Modern, responsive design optimized for all devices
+- ⚡ Fast loading with optimized assets and CDN integration
+- 📱 Mobile-first approach for seamless mobile experience
+- 🎯 SEO optimized for better search engine visibility
+- 🔧 Easy to customize and maintain with Hugo static site generator
+- 📦 NPM-based dependency management for reliable builds
+- 🎭 Interactive Lottie animations for engaging user experience
+- 🌙 Dark/Light theme support for user preference
+- 🍪 GDPR-compliant cookie management
+
+## Technology Stack
+
+- **Hugo**: Static site generator for fast, secure websites
+- **Bootstrap 5**: Modern CSS framework for responsive design
+- **JavaScript**: Interactive features and animations
+- **Lottie**: High-quality animations for web
+- **NPM**: Modern dependency management
+- **Boxicons**: Beautiful icon library
+- **Swiper**: Touch-enabled sliders and carousels
 
 ## Quick Start
 
@@ -20,129 +49,149 @@ A modern, responsive corporate website for BioAI Solutions built with Hugo and m
 - [Node.js](https://nodejs.org/) (v16 or higher)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### Installation
+### Development Setup
 
-1. Clone the repository:
+1. **Clone the repository**:
 
    ```bash
    git clone https://github.com/bioaisolutions/bioaisolutions-website.git
    cd bioaisolutions-website
    ```
 
-2. Install dependencies:
+2. **Install dependencies**:
 
    ```bash
    npm install
    ```
 
-   This will automatically:
-   - Install all npm dependencies
-   - Copy vendor files to the appropriate locations
-   - Set up Lottie animations and other assets
+   This automatically copies vendor files and sets up all assets.
 
-3. Start development server:
+3. **Start development server**:
 
    ```bash
    npm run dev
    ```
 
-4. Open your browser and visit `http://localhost:13131`
+4. **Open your browser** and visit `http://localhost:13131`
 
-### Building for Production
+### Production Build
 
 ```bash
 npm run build
 ```
 
-The built site will be in the `public/` directory.
+The built site will be in the `public/` directory, ready for deployment.
 
 ## Project Structure
 
 ```txt
-├── layouts/                 # HTML templates
-│   ├── _default/           # Default templates
+├── layouts/                 # Hugo HTML templates
+│   ├── _default/           # Default page templates
 │   └── partials/           # Reusable components
-├── scripts/                 # Build scripts
-│   └── copy-vendor.sh      # Vendor file copy script
-├── static/                  # Static files (images, favicon, etc.)
-│   ├── assets/             # Assets (vendor files, images, etc.)
+├── scripts/                 # Build automation scripts
+│   └── copy-vendor.sh      # Vendor file management
+├── static/                  # Static assets
+│   ├── assets/             # Website assets
 │   │   ├── json/           # Lottie animation files
 │   │   ├── img/            # Images and icons
 │   │   ├── favicon/        # Favicon files
-│   │   └── vendor/         # Third-party libraries (generated)
+│   │   └── vendor/         # Third-party libraries
 │   └── js/                 # JavaScript files
 ├── hugo.toml              # Hugo configuration
-├── package.json           # Node.js dependencies and scripts
-├── package-lock.json      # Locked dependency versions
+├── package.json           # Node.js dependencies
 └── README.md             # This file
 ```
 
-## Dependencies
-
-This project uses the following third-party libraries managed via npm:
-
-- **Bootstrap 5**: CSS framework
-- **Boxicons**: Icon library
-- **jQuery**: JavaScript library
-- **Swiper**: Touch slider
-- **Rellax**: Parallax library
-- **Lottie Player**: Animation player
-
 ## Development
 
-### Available Scripts
+### Available Commands
 
-- `npm run dev`: Start development server with asset building
-- `npm run build`: Build for production with asset building
-- `npm run build:assets`: Copy all vendor files from node_modules
+- `npm run dev`: Start development server with live reload
+- `npm run build`: Build optimized production site
+- `npm run build:assets`: Copy vendor files from node_modules
 
-### Build Scripts
+### Adding New Features
 
-The project uses a single shell script for vendor file management:
+1. **Content Updates**: Modify templates in `layouts/`
+2. **Styling Changes**: Update `static/assets/css/custom.css`
+3. **New Dependencies**: Add to `package.json` and update `scripts/copy-vendor.sh`
+4. **Images**: Place in `static/assets/img/` with appropriate subdirectories
 
-- `scripts/copy-vendor.sh`: Copies all vendor libraries (boxicons, swiper, rellax, lottie, jquery) with error checking and progress indicators
+### Customization Guide
 
-### Adding New Dependencies
+#### Content Management
 
-1. Install the package: `npm install package-name`
-2. Update `scripts/copy-vendor.sh` to include the new library
-3. Run `npm run build:assets` to copy the new files
+- Site configuration: `hugo.toml`
+- Page templates: `layouts/_default/`
+- Reusable components: `layouts/partials/`
 
-## Customization
+#### Styling
 
-### Content and Layout
+- Main theme: `static/assets/css/theme.min.css`
+- Custom styles: `static/assets/css/custom.css`
+- Responsive design: Bootstrap 5 classes
 
-- Modify templates in `layouts/` for layout changes
-- Update `hugo.toml` for site configuration
-- Add images to `static/assets/img/`
+#### Animations
 
-### Styling
+- Lottie files: `static/assets/json/`
+- Animation player: Already configured in templates
+- Add new animations by placing JSON files and updating HTML
 
-The project uses the reference site's `theme.min.css` for styling. For custom styles, consider:
+## Dependencies
 
-- Creating a custom CSS file in `static/assets/css/`
-- Modifying the theme file directly (not recommended for maintainability)
+### Core Libraries
 
-### Lottie Animations
+- **Bootstrap 5.3.2**: CSS framework
+- **jQuery 3.7.1**: JavaScript library
+- **Boxicons 2.1.4**: Icon library
+- **Swiper 10.3.1**: Touch slider
+- **Rellax 1.12.1**: Parallax effects
+- **Lottie Player 2.0.2**: Animation player
 
-The website includes Lottie animations in the features section. To add new animations:
+### Build Tools
 
-1. Place JSON animation files in `static/assets/json/`
-2. Update the HTML templates to include `<lottie-player>` elements
-3. Ensure the Lottie Player script is loaded (already configured)
+- **Hugo Extended**: Static site generator
+- **NPM**: Package management
+- **Shell Scripts**: Build automation
 
-## Technologies Used
+## Deployment
 
-- **Hugo**: Static site generator
-- **Bootstrap 5**: CSS framework
-- **JavaScript**: Interactive features
-- **NPM**: Dependency management
-- **Lottie**: Animation support
+### Static Hosting
+
+The built site can be deployed to any static hosting service:
+
+- **Netlify**: Connect repository for automatic deployments
+- **Vercel**: Zero-config deployment
+- **GitHub Pages**: Built-in hosting for GitHub repositories
+- **AWS S3**: Scalable cloud hosting
+- **Traditional Web Servers**: Apache, Nginx, etc.
+
+### Environment Variables
+
+No environment variables required for basic deployment.
+
+## Contributing
+
+This is a corporate website repository. For internal contributions:
+
+1. Create a feature branch
+2. Make your changes
+3. Test thoroughly with `npm run dev`
+4. Submit a pull request
+5. Ensure all tests pass before merging
+
+## Support
+
+For technical support or questions about this repository:
+
+- **Email**: <contact@bioaisolutions.com>
+- **Issues**: Use GitHub Issues for bug reports
+- **Documentation**: Check Hugo documentation for template questions
 
 ## License
 
-This project is proprietary to BioAI Solutions.
+This project is proprietary to BioAI Solutions. All rights reserved.
 
-## Contact
+---
 
-For questions or support, contact: contact@bioaisolutions.com
+**BioAI Solutions** - Advancing biotechnology through computational innovation.

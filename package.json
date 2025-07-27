@@ -1,0 +1,11 @@
+{
+  "name": "bioaisolutions-website",
+  "description": "BioAI Solutions corporate website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server --bind 0.0.0.0 --port 13131",
+    "build": "hugo --minify",
+    "clean": "rm -rf public"
+  }
+}

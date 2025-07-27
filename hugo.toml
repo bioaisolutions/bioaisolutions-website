@@ -1,0 +1,29 @@
+baseURL = 'https://bioaisolutions.com/'
+languageCode = 'en-us'
+title = 'BioAIsolutions'
+
+[params]
+  description = "BioAIsolutions - Accelerating Innovative Drug R&D through AI and Genomics"
+  author = "BioAIsolutions"
+  email = "contact@bioaisolutions.com"
+  phone = "+1-234-567-890"
+  address = "1234 BioAI Lane, Science City, Country"
+  keywords = "bioinformatics, genomics, artificial intelligence, drug development, Consulting, data science service, OMICs, data integration"
+
+[build]
+  writeStats = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+    isPlainText = true
+    notAlternative = true

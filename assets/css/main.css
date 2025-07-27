@@ -1,0 +1,342 @@
+/* Custom CSS for BioAI Solutions Website */
+
+/* Variables */
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #f8fafc;
+  --dark-color: #1e293b;
+  --light-color: #ffffff;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Dark theme variables */
+[data-bs-theme="dark"] {
+  --secondary-color: #0f172a;
+  --dark-color: #f8fafc;
+  --light-color: #1e293b;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+}
+
+/* Global styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+/* Header styles */
+.header {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-bs-theme="dark"] .header {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--dark-color) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--dark-color) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Theme switcher */
+.mode-switch {
+  margin-left: auto;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+/* Hero section */
+.jarallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.jarallax-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.zindex-5 {
+  z-index: 5;
+}
+
+/* Card styles */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.animation-on-hover {
+  transition: all 0.3s ease;
+}
+
+.animation-on-hover:hover {
+  transform: translateY(-8px);
+}
+
+/* Service cards */
+.shadow-primary {
+  box-shadow: 0 0 0 1px var(--primary-color), 0 4px 6px -1px rgba(99, 102, 241, 0.1);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #8b5cf6 100%);
+}
+
+/* Team cards */
+.card-img-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.btn-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Swiper styles */
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--primary-color);
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Back to top button */
+.btn-scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.btn-scroll-top:hover {
+  background-color: #4f46e5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-scroll-top-tooltip {
+  position: absolute;
+  right: 100%;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  background-color: var(--dark-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.btn-scroll-top:hover .btn-scroll-top-tooltip {
+  opacity: 1;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--secondary-color);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .btn-scroll-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Utility classes */
+.bg-size-cover {
+  background-size: cover;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+/* Lottie animation support */
+.d-dark-mode-none {
+  display: block;
+}
+
+.d-none {
+  display: none !important;
+}
+
+[data-bs-theme="dark"] .d-dark-mode-none {
+  display: none !important;
+}
+
+[data-bs-theme="dark"] .d-dark-mode-block {
+  display: block !important;
+}
+
+/* Animation classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom button styles */
+.btn-light {
+  background-color: var(--light-color);
+  border-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.btn-light:hover {
+  background-color: #f1f5f9;
+  border-color: #f1f5f9;
+  color: var(--dark-color);
+}
+
+/* Text utilities */
+.text-light {
+  color: var(--light-color) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Background utilities */
+.bg-light {
+  background-color: var(--secondary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.bg-dark {
+  background-color: var(--dark-color) !important;
+}
+
+/* Border utilities */
+.border-0 {
+  border: 0 !important;
+}
+
+.border-top {
+  border-top: 1px solid var(--border-color) !important;
+}
+
+/* Shadow utilities */
+.shadow-sm {
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg) !important;
+} 

@@ -1,0 +1,420 @@
+{{ define "main" }}
+  {{ partial "header.html" . }}
+
+  <!-- Hero -->
+  <section class="jarallax bg-dark pt-2 pt-lg-3 pb-lg-5" data-jarallax data-speed="0.35" data-bs-theme="dark" id="about">
+    <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-70"></span>
+            <div class="jarallax-img" style="background-image: url(assets/img/bg.jpg);"></div>
+    <div class="container position-relative zindex-5 pb-5">
+
+      <!-- Breadcrumb -->
+      <nav class="py-4" aria-label="breadcrumb">
+      </nav>
+
+      <!-- Title -->
+      <h1 class="display-3 mt-5 mb-4">AI + OMICs</h1>
+      <p class="lead text-light opacity-70 pb-2 mb-0 mb-md-3">Smart data integration / Drug discovery focus</p>
+      <p class="lead text-light opacity-70 pb-1 mb-0 mb-md-3"><b>BioAIsolutions</b> is a contract research organization (CRO) that specializes in knowledge database curation, omics data mining, and AI/machine learning consulting.</p>
+      <p class="lead text-light opacity-70 pb-1 mb-0 mb-md-3">We are committed to supporting biotech, pharmaceutical, diagnostic companies, and research organizations in accelerating therapeutic development and advancing precision medicine.</p>
+      <p class="lead text-light opacity-70 pb-1 mb-0 mb-md-3">Our mission is to empower the life sciences industry by harnessing the power of artificial intelligence and cutting-edge bioinformatics tools.</p>
+
+  </section>
+
+  <!-- Main features (Slider on narrow screens) -->
+  <section class="container pt-5">
+    <div class="swiper mt-n3 mt-md-0 pt-md-4 pt-lg-5 mx-n2" data-swiper-options='{
+      "slidesPerView": 1,
+      "spaceBetween": 8,
+      "pagination": {
+        "el": ".swiper-pagination",
+        "clickable": true
+      },
+      "navigation": {
+        "prevEl": "#prev-news",
+        "nextEl": "#next-news"
+      },
+      "breakpoints": {
+        "500": {
+          "slidesPerView": 2
+        },
+        "700": {
+          "slidesPerView": 3
+        },
+        "1000": {
+          "slidesPerView": 4
+        }
+      }
+    }'>
+      <div class="swiper-wrapper">
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto pb-3">
+          <div class="card card-hover bg-light border-0 animation-on-hover h-100 mx-2">
+            <lottie-player class="d-dark-mode-none mx-auto mt-4 mb-2" src="assets/json/animation-feature-1-light.json" background="transparent" speed="1.25" loop style="width: 180px;"></lottie-player>
+            <lottie-player class="d-none d-dark-mode-block mx-auto mt-4 mb-2" src="assets/json/animation-feature-1-dark.json" background="transparent" speed="1.25" loop style="width: 180px;"></lottie-player>
+            <div class="card-body fs-lg fw-semibold text-center">Standardized / Customized Mode</div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto pb-3">
+          <div class="card card-hover bg-light border-0 animation-on-hover h-100 mx-2">
+            <lottie-player class="d-dark-mode-none mx-auto mt-4 mb-2" src="assets/json/animation-feature-2-light.json" background="transparent" speed="1.25" loop style="width: 180px;"></lottie-player>
+            <lottie-player class="d-none d-dark-mode-block mx-auto mt-4 mb-2" src="assets/json/animation-feature-2-dark.json" background="transparent" speed="1.25" loop style="width: 180px;"></lottie-player>
+            <div class="card-body fs-lg fw-semibold text-center">Flexible Collaboration</div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto pb-3">
+          <div class="card card-hover bg-light border-0 animation-on-hover h-100 mx-2">
+            <lottie-player class="d-dark-mode-none mx-auto mt-4 mb-2" src="assets/json/animation-feature-3-light.json" background="transparent" speed="1.25" loop style="width: 180px;"></lottie-player>
+            <lottie-player class="d-none d-dark-mode-block mx-auto mt-4 mb-2" src="assets/json/animation-feature-3-dark.json" background="transparent" speed="1.25" loop style="width: 180px;"></lottie-player>
+            <div class="card-body fs-lg fw-semibold text-center">Affordable Price</div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide h-auto pb-3">
+          <div class="card card-hover bg-light border-0 animation-on-hover h-100 mx-2">
+            <lottie-player class="d-dark-mode-none mx-auto mt-4 mb-2" src="assets/json/animation-feature-4-light.json" background="transparent" speed="1.25" loop style="width: 180px;"></lottie-player>
+            <lottie-player class="d-none d-dark-mode-block mx-auto mt-4 mb-2" src="assets/json/animation-feature-4-dark.json" background="transparent" speed="1.25" loop style="width: 180px;"></lottie-player>
+            <div class="card-body fs-lg fw-semibold text-center">Free Lifetime Updates</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination (bullets) -->
+      <div class="swiper-pagination position-relative bottom-0 mt-2"></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="bg-secondary pb-md-2 pb-lg-5" id="services">
+    <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
+    <div class="container pb-4 pt-5">
+      <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Our Services</h2>
+
+      <!-- Track 1 -->
+      <div class="text-center">
+        <h3 class="h1 pt-2 pt-lg-0">Track 1: LLM-based Knowledge Database Curation</h3>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2">
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/cms.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Knowledge Database Curation
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Curate structured data from public and private sources, optimizing it for integration and analysis to accelerate research and discoveries.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/rocket.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Omics integration
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Plug in omics data for further analysis</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/mobile-app.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Example 1. Intelligent target knowledge database
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Targets with supporting genetic evidence, clear therapeutic rationale and high clinical success rate</p>
+              <p class="fs-sm text-body mb-0">Comprehensive information curated from publication, clinical data and patent data</p>
+              <p class="fs-sm text-body mb-0">Actionable insights for early-stage drug discovery, biomarker development, and patient selection</p>
+              <p class="fs-sm text-body mb-0">Automatic knowledge updates and target monitoring by AI</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/analytics.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Example 2. Smart human variants knowledge database
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Collection of human variants with functional characterization from literatures</p>
+              <p class="fs-sm text-body mb-0">Clinical relevance categorization by AI following ACMG guideline</p>
+              <p class="fs-sm text-body mb-0">Potential application in disease diagnosis and drug development</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Track 2 -->
+      <div class="text-center">
+        <h3 class="h1 pt-2 pt-lg-0">Track 2: Omics Data Mining for Research and Decision Making</h3>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3">
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/cms.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Genomics, Transcriptomics and Epigenomics Data Analysis
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Developing customized pipelines for large scale RNA-seq, single-cell RNA-seq, long-read sequencing, variant calling, gene fusion detection, ChIP-seq, ATAC-seq, and bisulfite sequencing</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/rocket.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Proteomics and Metabolomics data analysis
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">mass spectrometry-based proteomics and metabolomics data analysis, including in-depth mining for identifying biomarkers, quantifying proteins and metabolites, and understanding metabolic pathways in various biological contexts.</p>
+            </div>
+          </a>
+        </div>
+
+                <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/mobile-app.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Single-Cell and Spatial Omics Data Analysis
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">single-cell RNA-seq, single-cell ATAC-seq, and spatial transcriptomics.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/analytics.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Multi-Omics Integrative Data Analysis
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Building customized platforms for integrating, visualizing and analyzing multi-omics datasets, including genomics, transcriptomics, proteomics, metabolomics, and methylomics, to elucidate complex biological processes and disease mechanisms.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/analytics.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Cloud or HPC deployment
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">cloud computing deployment and high-performance computing for scalable omics data analysis and storage solutions.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Track 3 -->
+      <div class="text-center">
+        <h3 class="h1 pt-2 pt-lg-0">Track 3: AI Assistant for Regulatory Documents Filing and Grants Writing</h3>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2">
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/cms.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Compliance Check
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Automatically ensure documents meet the latest regulatory guidelines with comprehensive checks for format and content.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/rocket.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Content Assessment
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Evaluate and improve the scientific quality of submissions with AI-driven suggestions tailored to regulatory expectations.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/mobile-app.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Risk Prediction
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Predict submission success rates and highlight risk areas, enhancing the chances of regulatory approval.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col py-4 my-2 my-sm-3">
+          <a class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body pt-3">
+              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                <img src="assets/img/services/icons/analytics.svg" class="d-block m-1" width="40" alt="Icon">
+              </div>
+              <h2 class="h4 d-inline-flex align-items-center">
+                Data Security
+                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+              </h2>
+              <p class="fs-sm text-body mb-0">Maintain the highest standards of data privacy and security, in compliance with GDPR, HIPAA, and other regulations.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="container py-5 my-md-3 my-lg-5" id="team">
+    <h2 class="h1 text-center pt-1 mt-5 pb-3 mb-3 mb-lg-4">Our Team</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <div class="col"></div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="card card-hover border-0 bg-transparent">
+          <div class="position-relative">
+            <img src="assets/img/team/xing-tang.jpg" class="rounded-3" alt="Xing Tang">
+            <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+              <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 rounded-3"></span>
+              <div class="position-relative d-flex zindex-2">
+                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center p-3">
+            <h3 class="fs-lg fw-semibold pt-1 mb-2">Xing Tang</h3>
+            <p class="fs-sm mb-0">Co-Founder &amp; CEO</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="card card-hover border-0 bg-transparent">
+          <div class="position-relative">
+            <img src="assets/img/team/linlin-yan.jpg" class="rounded-3" alt="Linlin Yan">
+            <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+              <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 rounded-3"></span>
+              <div class="position-relative d-flex zindex-2">
+                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center p-3">
+            <h3 class="fs-lg fw-semibold pt-1 mb-2">Linlin Yan</h3>
+            <p class="fs-sm mb-0">Co-Founder & CTO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="container mt-n2" id="contact">
+    <div class="card border-0 bg-gradient-primary">
+      <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(assets/img/landing/digital-agency/contact-bg.png);">
+        <div class="py-md-5 py-4 text-center">
+          <h3 class="h4 fw-normal text-light opacity-75">Want to work with us? Let's talk</h3>
+          <a href="mailto:{{ .Site.Params.email }}" class="display-6 text-light">{{ .Site.Params.email }}</a>
+          <div class="pt-md-5 pt-4 pb-md-2">
+            <a href="mailto:{{ .Site.Params.email }}" class="btn btn-lg btn-light">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer border-top pt-5 pb-4 pb-lg-5">
+    <div class="container text-center pt-2 pt-md-4 pt-lg-5 pb-xl-3">
+      <div class="pt-5 mt-lg-3 mt-xl-4">
+        <p class="text-muted mb-0">&copy; All rights reserved. {{ .Site.Title }}</p>
+      </div>
+    </div>
+  </footer>
+{{ end }} 
